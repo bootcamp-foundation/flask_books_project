@@ -1,0 +1,43 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family:sans-serif;
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding:  45px;
+}
+
+#website-log a {
+    color: #000;
+    font-size: 25px;
+    font-weight: 500;
+    font-family: monospace;
+}
+
+a  {
+    text-decoration: none;
+}
+
+.display-flex, #logos {
+    display: flex;
+    list-style: none;
+}
+.display-flex, li {
+    padding: 0 10px;
+}
+
+
+#banner {
+    background-image: url(https://templatemo.com/templates/templatemo_509_hydro/images/home-bg.jpg);
+    
+}
+
+#banner .gradient-bg {
+    padding: 200px;
+
+    background: linear-gradient(100deg, #0022ff9b , #06f7538d );;
+}

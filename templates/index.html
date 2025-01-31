@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        
+        {{ title }}
+
+    </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+
+
+</head>
+<body>
+
+    <header>
+        <div id="website-log">
+            <a href="#">Hydro</a>
+        </div>
+        <div id="navigation">
+            <ul class="display-flex">
+                <li>Home</li>
+                <li>About</li>
+                <li>Blog</li>
+                <li>Our Work</li>
+                <li>Contacts</li>
+            </ul>
+        </div>
+        <div id="logos">
+            <div>
+                <ul class="display-flex">
+                    <li>
+                        facebook
+                    </li>
+                    <li>
+                        twitter
+                    </li>
+                    <li>
+                        instagram
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <button>
+                    Sign in/Join
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+    <div id="banner">
+        <div class="gradient-bg">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/_CXwZ5xyFno?si=YBAI_YAX0ZWKnDjq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+        </div>
+    </div>
+
+
+    <div>
+
+        <ul>
+            
+                
+
+                {% for i in books %}
+
+                    <li>
+                        <strong>Name: </strong> {{i.name}} <br /> 
+                         
+                    </li>
+
+                    <li>
+                        <strong>Author: </strong> {{i.author}}  <br /> <br />
+                    </li>
+                {% endfor %}
+
+            
+        </ul>
+
+    </div>
+
+    <form action="/" method="post">
+
+        <input type="text" name="name" placeholder="Kitob nomi">
+        <input type="text" name="author" placeholder="Kitob muallifi">
+        <input type="checkbox" name="muqova">
+        
+        <button type="submit">Submit</button>
+
+    </form>
+    
+</body>
+</html>
